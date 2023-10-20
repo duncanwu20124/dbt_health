@@ -1,0 +1,26 @@
+version: 2
+
+sources:
+  - name: health_source
+    database: health
+    schema: public 
+    description: "Source for health data"
+    tables:
+      - name: emotion
+        description: "table for emotion"
+      - name: fetus
+        description: "table for fetus"
+      - name: pet
+        description: "table for pet"
+
+models:
+  - name: emotion_fetus_model
+    example:
+      +materialized: view
+      +schema: public
+      +enabled: true
+  - name: emotion_pet_model
+    example:
+      +materialized: view
+      +schema: public
+      +enabled: true
