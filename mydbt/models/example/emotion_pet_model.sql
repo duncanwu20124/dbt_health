@@ -9,6 +9,6 @@ WITH QA AS (
     JOIN {{ source('health_source','pet') }} AS pet ON emo.class_id = pet.class_id
 )
 SELECT DISTINCT
-    emo_question AS question,
-    emo_answer AS answer
+    pet_question AS question,
+    pet_answer AS answer
 FROM QA
