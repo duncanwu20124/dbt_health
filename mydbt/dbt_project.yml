@@ -36,3 +36,4 @@ models:
     #example:
     #  +materialized: view
       +schema: mydbt
+    #
